@@ -30,10 +30,10 @@ if ($server == 'localhost') {
 } else {
     abstract class Model
 {
-    const SERVER = "db763571447.hosting-data.io";
-    const USER = "dbo763571447";
-    const PASSWORD = "1&1Profs_test";
-    const BASE = "db763571447";
+    const SERVER = "localhost";
+    const USER = "bxjurhjn_vincent";
+    const PASSWORD = "ABPEgcqm6949&@";
+    const BASE = "bxjurhjn_parc_zoo_sigeansud";
 
     protected $connexion;
 
