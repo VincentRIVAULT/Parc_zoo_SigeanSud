@@ -1,0 +1,1225 @@
+
+
+* {
+    box-sizing: border-box;
+/*pour enlever les marges automatiques des différents navigateurs*/
+    margin: 0;
+    padding: 0;
+}
+
+/* Box-sizing pour Bootstrap */
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+html {
+    font-size: 62.5%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    /* défilement doux de la flèche "retour" */
+    scroll-behavior: smooth;
+}
+
+/* FONT FACE */
+/* Appelle les polices de la page */
+
+
+
+
+/****************************************************
+*                     GLOBAL                        *
+*                                                   *
+*               Balises et classes                  *
+*       appelés à plusieurs endroits dans la page   *
+****************************************************/
+
+body {
+    font-family: 'Open Sans', 'Poppins', 'Roboto', sans-serif;
+    font-size: 1.4em;
+    /* background-color: lightcyan; */
+    /* background-color: lightgoldenrodyellow; */
+    /* background-color: lightgreen; */
+    /* background-color: lightgrey; */
+    /* background-color: whitesmoke; */
+    /* background-color: white; */
+    margin: 0 auto;
+    padding: 0;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    position: relative;
+	/* height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto; */
+}
+
+h1 {
+    text-align: center;
+}
+
+/* #toBe {
+    margin-top: 2em;
+} */
+
+#container {
+    width: 80%;
+    /* max-width: 1280px; */
+    margin: 0 auto;
+    padding: 0 2em;
+    min-height: 100%;
+    position: relative;
+    /* background-color: whitesmoke; */
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flexWrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexCenterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexAroundWrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexBetweenWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flexStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* .flexColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+
+/****************************************************
+*                     HEADER                        *
+*                                                   *
+*          Ce qui concerne le header et la nav      *
+****************************************************/
+
+header {
+    background-color: #2C2D33;
+    padding: 0.5em;
+}
+
+header nav {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header nav a {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navMenu {
+    width: 80%;
+    padding: 1em 0;
+    margin: 0 auto;
+    /* background-color: whitesmoke; */
+    /* background-color: lightgrey; */
+}
+
+nav ul {
+    width: 100%;
+    /* padding: 5em 0; */
+    /* margin: 1em; */
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 1em;
+}
+
+#acc {
+    background-color: #2c2d33;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* #acc::before {
+    content: "<";
+    padding-right: 0.1em;
+}
+
+#acc::after {
+    content: "/>";
+    padding-right: 0.1em;
+} */
+
+#acc:hover {
+    background-color: #2c2d33;
+    /* padding: 1em; */
+    /* color: cyan; */
+    color: greenyellow;
+    font-weight: bold;
+}
+
+#menuPrincipal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid goldenrod; */
+}
+
+#menuPrincipal > li {
+    width: 15%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+#menuPrincipal a {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    /* border: 1px solid white; */
+    padding: 1em;
+    justify-content: center;
+    text-decoration: none;
+    /* color: white; */
+    /* background: #3f413d; */
+}
+
+#menuPrincipal li:hover #sousMenu {
+    display: block;
+    max-height: 500px;
+}
+
+#sousMenu {
+    position: absolute;
+    /* flex-direction: column; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition-duration: 1s;
+    z-index: 1;
+}
+
+#sousMenu li {
+    width: 80%;
+    margin: 0.2em auto;
+}
+
+#sousMenu li a {
+    background-color: goldenrod;
+    color: white;
+    font-weight: bold;
+}
+
+#espMenu {
+    /* color: #0066ff; */
+    /* color: green; */
+    /* color: goldenrod; */
+    color: chocolate;
+    /* background-color: green; */
+    /* color: white; */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#espMenu:hover {
+    /* background-color: green; */
+    /* background-color: goldenrod; */
+    background-color: chocolate;
+    color: white;
+    /* font-weight: bold; */
+}
+
+#aniMenu {
+    /* color: #0066ff; */
+    /* color: green; */
+    /* color: goldenrod; */
+    color: chocolate;
+    /* background-color: green; */
+    /* color: white; */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#aniMenu:hover {
+    /* background-color: green; */
+    /* background-color: goldenrod; */
+    background-color: chocolate;
+    color: white;
+    /* font-weight: bold; */
+}
+
+#menMenu {
+    /* color: #0066ff; */
+    /* color: green; */
+    /* color: goldenrod; */
+    color: chocolate;
+    /* background-color: green; */
+    /* color: white; */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#menMenu:hover {
+    /* background-color: green; */
+    /* background-color: goldenrod; */
+    background-color: chocolate;
+    color: white;
+    /* font-weight: bold; */
+}
+
+#encMenu {
+    /* color: #0066ff; */
+    /* color: green; */
+    /* color: goldenrod; */
+    color: chocolate;
+    /* background-color: green; */
+    /* color: white; */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#encMenu:hover {
+    /* background-color: green; */
+    /* background-color: goldenrod; */
+    background-color: chocolate;
+    color: white;
+    /* font-weight: bold; */
+}
+
+#objMenu {
+    /* color: #0066ff; */
+    /* color: green; */
+    /* color: goldenrod; */
+    color: chocolate;
+    /* background-color: green; */
+    /* color: white; */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#objMenu:hover {
+    /* background-color: green; */
+    /* background-color: goldenrod; */
+    background-color: chocolate;
+    color: white;
+    /* font-weight: bold; */
+}
+
+#menuParc {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+    /* border: 1px solid green; */
+}
+
+#menuParc > li {
+    width: 15%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+#menuParc a {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    /* border: 1px solid white; */
+    padding: 1em;
+    justify-content: center;
+    text-decoration: none;
+    /* color: white; */
+    /* background: #3f413d; */
+}
+
+#popMenu {
+    /* color: #0066ff; */
+    color: green;
+    /* color: brown; */
+    /* color: goldenrod; */
+    /* background-color: green; */
+    /* background-color: goldenrod; */
+    /* color: white; */
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid;
+    /* border-radius: 50%; */
+}
+
+#popMenu:hover {
+    /* background-color: brown; */
+    background-color: green;
+    /* background-color: goldenrod; */
+    color: white;
+    /* font-weight: bold; */
+}
+
+#occMenu {
+    /* color: #0066ff; */
+    color: green;
+    /* color: brown; */
+    /* color: goldenrod; */
+    /* background-color: green; */
+    /* background-color: goldenrod; */
+    /* color: white; */
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid;
+}
+
+#occMenu:hover {
+    /* background-color: brown; */
+    background-color: green;
+    /* background-color: goldenrod; */
+    color: white;
+    /* font-weight: bold; */
+}
+
+#gesMenu {
+    /* color: #0066ff; */
+    color: green;
+    /* color: brown; */
+    /* color: goldenrod; */
+    /* background-color: green; */
+    /* background-color: goldenrod; */
+    /* color: white; */
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid;
+}
+
+#gesMenu:hover {
+    /* background-color: brown; */
+    background-color: green;
+    /* background-color: goldenrod; */
+    color: white;
+    /* font-weight: bold; */
+}
+
+#plaMenu {
+    /* color: #0066ff; */
+    color: green;
+    /* color: brown; */
+    /* color: goldenrod; */
+    /* background-color: green; */
+    /* background-color: goldenrod; */
+    /* color: white; */
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid;
+}
+
+#plaMenu:hover {
+    /* background-color: brown; */
+    background-color: green;
+    /* background-color: goldenrod; */
+    color: white;
+    /* font-weight: bold; */
+}
+
+#connect {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: grey;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em;
+}
+
+#connect:hover {
+    background-color: grey;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#deconnect {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: grey;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em;
+}
+
+#deconnect:hover {
+    background-color: grey;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#retourConsultation {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: grey;
+    /* color: green; */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em;
+    /* background-color: green;
+    color: #ffffff; */
+}
+
+#retourConsultation:hover {
+    /* background-color: grey; */
+    background-color: green;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#retourMAJ {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: grey;
+    /* color: #0066ff; */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em;
+    /* background-color: #0066ff;
+    color: #ffffff; */
+}
+
+#retourMAJ:hover {
+    /* background-color: grey; */
+    background-color: #0066ff;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#menuMaj {
+    padding: 0;
+    margin: 0;
+}
+
+#menuMaj > li {
+    width: 15%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position:relative;
+}
+
+#menuMaj a {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    color: #0066ff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em;
+}
+
+#menuMaj a:hover {
+    background-color: #0066ff;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#menuMaj li:hover #sousMenuMajProfil {
+    display: block;
+    max-height: 500px;
+}
+
+#sousMenuMajProfil {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition-duration: 1s;
+    z-index: 1;
+}
+
+#sousMenuMajProfil li {
+    width: 80%;
+    margin: 0.2em auto;
+}
+
+#sousMenuMajProfil li a {
+    background-color: goldenrod;
+    /* background-color: #0066ff; */
+    color: white;
+    font-weight: bold;
+}
+
+#menuMajParc {
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+#menuMajParc > li {
+    width: 15%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position:relative;
+}
+
+#menuMajParc a {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    color: #0066ff;
+    /* background-color: #0066ff;
+    color: #ffffff; */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em;
+}
+
+#menuMajParc a:hover {
+    background-color: #0066ff;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* .active {
+    font-weight: bold;
+    color: white;
+} */
+
+/* #menuPrincipal li.active {
+    margin-left: 0;
+    color: white;
+} */
+
+
+/*__________________________________________________
+              
+            Bouton retour en haut de page
+____________________________________________________*/
+
+a#retour {
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    right: 20px;
+    opacity: 1;
+    z-index: 99999;
+    transition: all ease-in 0.2s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    text-decoration: none;
+}
+
+a#retour:before {
+    content: "\25b2";
+}
+
+a#retour:hover {
+    background: rgba(0, 0, 0, 1);
+    transition: all ease-in 0.2s;
+}
+
+a#retour.invisible{
+    bottom: -35px;
+    opacity: 0;
+    transition: all ease-in 0.5s;
+}
+
+a#retour.visible{
+    bottom:20px;
+    opacity:1;
+}
+
+
+/****************************************************
+*                     MAIN                          *
+*                                                   *
+*          Ce qui concerne le corps du site         *
+****************************************************/
+
+main {
+    width: 100%;
+}
+
+main h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 3em 0;
+}
+
+main h3 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3em;
+}
+
+main h4 {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+main section article {
+    margin: 3em 0;
+}
+
+main section article ul li {
+    list-style-position: inside;
+}
+
+.required {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.error {
+	color: red;
+	font-size: 0.8em;
+	display: none;
+}
+
+.spanBold {
+    font-weight: bold;
+}
+
+.spanItalic {
+    font-style: italic;
+}
+
+.spanUnderline {
+    text-decoration-line: underline;
+}
+
+.spanBoldItalic {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.spanBoldUnderline {
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+.spanItalicUnderline {
+    font-style: italic;
+    text-decoration-line: underline;
+}
+
+.spanBoldItalicUnderline {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration-line: underline;
+}
+
+.spanBoldItalicGreen {
+    font-weight: bold;
+    font-style: italic;
+    color: green;
+}
+
+/* #search {
+    margin: 4em;
+}
+
+.spanSearch {
+    position: relative;
+    display: inline-block;
+    direction: ltr;
+    width: 100%;
+}
+
+#search-input {
+    position: relative;
+    vertical-align: top;
+    margin: 0 auto;
+    width: 20%;
+} */
+
+
+/*__________________________________________________
+              
+                PAGE ACCUEIL
+____________________________________________________*/
+
+#accueil {
+    margin: 1em 0;
+}
+
+#accueilH2 {
+    /* color: #0066ff; */
+    /* color: green; */
+    color: #2c2d33;
+}
+
+#accueil article p {
+    margin-bottom: 1em;
+}
+
+#messageAccueil {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* #presentation p {
+    color: grey;
+    font-weight: bold;
+} */
+
+#photosAnimaux h4 {
+    margin-bottom: 2em;
+}
+
+#photosAnimaux figure {
+    margin-bottom: 5em;
+    margin-right: 2.5em;
+}
+
+#photosAnimaux figure img {
+    width: 20em;
+    /* height: 100%; */
+}
+
+/*__________________________________________________
+              
+                PAGE ESPECE
+____________________________________________________*/
+
+#espece {
+    margin: 1em 0;
+}
+
+#especeH2 {
+    color: #0066ff;
+}
+
+#espece article p {
+    margin-bottom: 1em;
+}
+
+
+
+
+/*__________________________________________________
+              
+                PAGE ANIMAL
+____________________________________________________*/
+
+#animal {
+    margin: 1em 0;
+}
+
+#animalH2 {
+    color: #dc143c;
+}
+
+#espece article p {
+    margin-bottom: 1em;
+}
+
+
+
+/*__________________________________________________
+              
+                PAGE ENCLOS
+____________________________________________________*/
+
+#enclos {
+    margin: 1em 0;
+}
+
+#enclosH2 {
+    color: #ff7f50;
+}
+
+#enclos article p {
+    margin-bottom: 1em;
+}
+
+
+/*__________________________________________________
+              
+                PAGE OBJET
+____________________________________________________*/
+
+#objet {
+    margin: 1em 0;
+}
+
+#objetH2 {
+    color: #ff69b4;
+}
+
+#objet article p {
+    margin-bottom: 1em;
+}
+
+
+/*__________________________________________________
+              
+                PAGE PROFIL
+____________________________________________________*/
+
+#profil {
+    margin: 1em 0;
+}
+
+#profilH2 {
+    color: blue;
+}
+
+#profil article p {
+    margin-bottom: 1em;
+}
+
+
+/*__________________________________________________
+              
+                CONNEXION
+
+                (login)
+____________________________________________________*/
+
+#login {
+    width: 100%;
+    margin: 2em 0;
+}
+
+#login h2 {
+    color: green;
+}
+
+#login form {
+    width: 50%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#login form ul li {
+    list-style-type: none;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+#login label {
+    font-weight: bold;
+    display: inline-block;
+    width: 25%;
+}
+
+#login input[type="text"],
+input[type="password"] {
+    width: 50%;
+}
+
+#connexion {
+    background-color: green;
+}
+
+
+/*__________________________________________________
+              
+                MENTIONS LEGALES
+____________________________________________________*/
+
+
+
+
+
+/****************************************************
+*                     FOOTER                        *
+*                                                   *
+*          Ce qui concerne le pied de page          *
+****************************************************/
+
+footer {
+    width: 100%;
+    /* background-color: #636574; */
+    background-color: #2c2d33;
+    color: white;
+    padding: 2em 0;
+    /* margin-bottom: 15em; */
+    position: relative;
+    /* height: 12em; */
+    /* position: absolute; */
+    /* bottom: 0; */
+}
+
+footer p {
+    text-align: center;
+    /* padding-top: 1em;
+    padding-bottom: 1em; */
+}
+
+/* LICENCE */
+/* Ce qui concerne les mentions légales du site */
+
+#licence {
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: normal;
+    /* padding: 1em; */
+    margin: 0 auto;
+}
+
+#licence p {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+#licence p a:hover {
+    color: white;
+}
+
+#licence img {
+    width: 5em;
+    margin: 0 auto;
+}
+
+#licence a {
+    color: white;
+}
+
+
+/****************************************************
+*               Gestion des Cookies                 *
+*                                                   *
+*                                                   *
+****************************************************/
+
+
+
+
+
+/****************************************************
+*               SITE "RESPONSIVE"                   *
+*                                                   *
+*          définition des "mediaqueries" :          *
+*               @media screen and ()                *
+****************************************************/
+
+/* quand on veut faire un site "responsive", on prend la taille "max-width" quand on part par défaut d'une version "Desktop" et que l'on veut modifier certaines choses dans une version tablette et mobile */
+/* à l'inverse, si on part d'une version mobile par défaut, on prend la taille "min-width" pour modifier certaines choses dans une version tablette et Desktop */
+
+
+/*              VERSION TABLETTE
+____________________________________________________*/
+
+
+@media screen and (max-width: 1024px) {
+
+    
+
+}
+
+
+
+/*                  VERSION MOBILE
+____________________________________________________*/
+
+
+/* MENU */
+
+@media screen and (max-width: 600px) {
+
+    .flexCenter {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flexCenterWrap {
+        flex-direction: column;
+        /* flex-direction: row; */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .flexBetween {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .flexBetweenWrap {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .flexAround {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .flexAroundWrap {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .flexAroundWrap {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .flexEnd {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #menuPrincipal > li {
+        width: 50%;
+        /* margin-bottom: 0.1em; */
+    }
+
+    #menuParc > li {
+        width: 50%;
+        margin-bottom: 0.2em;
+    }
+
+    #menuGestion > li {
+        width: 50%;
+        /* margin-bottom: 0.1em; */
+        margin: 0.1em 0;
+    }
+        
+    /* #menuMaj {
+        display: none;
+    } */
+
+    #menuMaj > li {
+        width: 50%;
+        /* margin: 0 auto; */
+        margin-bottom: 0.1em;
+    }
+
+    #menuMajParc > li {
+        width: 50%;
+        /* margin: 0 auto; */
+        margin-bottom: 0.2em;
+    }
+
+    /* nav ul li {
+        padding-bottom: 0.1em;
+    } */
+
+    #container {
+        padding: 0;
+    }
+    
+
+}
+
+/* MAIN */
+
+@media screen and (max-width: 600px) {
+
+#search-input {
+    width: 100%;
+}
+
+}
+
+/* ACCUEIL */
+
+@media screen and (max-width: 600px) {
+    
+    #accueilH4 {
+        text-align: center;
+    }
+
+    #photosAnimaux figure {
+        margin-top: 1em;
+        margin-right: 0;
+    }
+
+    /* #photosAnimaux figure img {
+        width: 80%;
+    }     */
+    
+}
+
+/* PAGE CONNEXION */
+
+@media screen and (max-width: 600px) {
+
+    #login form {
+        width: 100%;
+        /* padding: 0;
+        margin: 0 auto; */
+    }
+
+}  
+
+/* MENTIONS */
+
+@media screen and (max-width: 600px) {
+
+   
+
+}
+
+
+
